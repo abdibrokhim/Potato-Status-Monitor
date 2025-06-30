@@ -4,6 +4,7 @@ import PotatoBackdrop from "@/components/PotatoBackdrop";
 import ThemeToggle from "@/components/ThemeToggle";
 import { Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 // Dynamic imports to prevent hydration issues
 const PotatoStatusCard = dynamic(() => import("@/components/PotatoStatusCard"), {
@@ -65,8 +66,21 @@ export default function Home() {
         </div>
       </main>
 
+      {/* Logo - Bottom Right */}
+      <div className="fixed bottom-4 right-4 z-10">
+        <div className="bg-white/90 dark:bg-black/90 backdrop-blur-sm rounded-full p-2 shadow-lg">
+          <Image
+            src="/white_circle_360x360.png"
+            alt="Logo"
+            width={48}
+            height={48}
+            className="rounded-full"
+          />
+        </div>
+      </div>
+
       {/* Footer */}
-      <footer className="fixed bottom-4 left-4 right-4">
+      <footer className="fixed bottom-4 left-4 right-20">
         <div className="flex justify-center">
           <div className="bg-card/80 backdrop-blur-sm border rounded-lg px-4 py-2">
             <p className="text-sm text-muted-foreground text-center">
