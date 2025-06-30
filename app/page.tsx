@@ -68,15 +68,22 @@ export default function Home() {
 
       {/* Logo - Bottom Right */}
       <div className="fixed bottom-4 right-4 z-10">
-        <div className="bg-white/90 dark:bg-black/90 backdrop-blur-sm rounded-full p-2 shadow-lg">
-          <Image
-            src="/white_circle_360x360.png"
-            alt="Logo"
-            width={48}
-            height={48}
-            className="rounded-full"
-          />
-        </div>
+        <a
+          href="https://bolt.new"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block transition-transform hover:scale-110"
+        >
+          <div className="bg-white/90 dark:bg-black/90 backdrop-blur-sm rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow">
+            <Image
+              src="/white_circle_360x360.png"
+              alt="Bolt.new Logo"
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
+          </div>
+        </a>
       </div>
 
       {/* Footer */}
